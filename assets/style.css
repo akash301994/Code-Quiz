@@ -1,0 +1,54 @@
+/* global declarations */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    border: 1px solid red;
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #53b0bd;
+}
+
+p {
+    color: white;
+    font-size: 1.3em;
+}
+
+.top-bar {
+    padding: 30px;
+    margin: 20px;
+    
+}
+
+button {
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 1.3em;
+
+}
+
+/*----------------- 
+--outer container--
+------------------ */
+
+.top-bar p {
+    float: right;
+    background-color: black;
+}
+
+
+.outer-container {
+    padding: 10px;
+}
+
+
+/* --------------------
+---inner container-----
+-----------------------*/
+
+
