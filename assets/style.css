@@ -12,7 +12,7 @@
 
 body {
     background-color: #53b0bd;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 p {
@@ -113,6 +113,25 @@ h2{
     
 }
 .btn:hover {
+    background: #222;
+    color: white;
+    transition: all 0.4s;
+
+}
+
+#next-btn {
+    background: white;
+    color: #222;
+    font-weight: 500;
+    border: 1 px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#next-btn:hover{
     background: #222;
     color: white;
     transition: all 0.4s;
