@@ -20,16 +20,12 @@ p {
     font-size: 1.3em;
 }
 
-/* button {
-    outline: none;
-    background-color: black;
+h1 {
     color: white;
-    font-size: 1.3em;
+}
 
-} */
-
-h1, h2 {
-    color: darkgreen;
+h2{
+    font-size: 1.3rem;
 }
 /* top bar container */
 
@@ -42,7 +38,7 @@ h1, h2 {
 
 .top-bar p {
     float: right;
-    background-color: black;
+    /* background-color: black; */
 }
 
 /*----------------- 
@@ -63,8 +59,8 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
-    height: 100%;
+    /* background-color: black; */
+    height: 50%;
     width: 50%;
     margin: 0 auto; 
  }
@@ -77,10 +73,9 @@ h1, h2 {
 
 /* header quiz intro */
 .quiz-intro {
-    padding: 50px;
-    justify-content: center;
-
-
+    margin-bottom: auto;
+    text-align: center;
+    
 }
 
 
@@ -100,7 +95,7 @@ h1, h2 {
 .highscores:hover {
     background: #222;
     color: white;
-    transition: all 0.3;
+    transition: all 0.4s;
 }
 
 .btn{
@@ -120,12 +115,18 @@ h1, h2 {
 .btn:hover {
     background: #222;
     color: white;
-    transition: all 0.3;
+    transition: all 0.4s;
 
 }
 
 .app h1 {
-    padding: 50px;
-    ;
+    text-align: center;
+    
     
 }
+
+.quiz h2 {
+    text-align: center;
+}
+
+
