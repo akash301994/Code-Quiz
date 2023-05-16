@@ -7,6 +7,7 @@
     <title>Code-Quiz</title>
     <link rel="stylesheet" type="text/css"  href="./assets/style.css">
 </head>
+
 <body>
     <!-- main outer div for timer -->
     <div class="outer-container">
@@ -19,7 +20,7 @@
             </div>
 
             <!-- inner div -->
-            <div>
+            <div class="inner-container">
 
 
 
@@ -28,12 +29,25 @@
                 <!-- main header/quiz intro -->
 
                 <header class="quiz-intro">
+                    <h1>Welcome to the quiz!</h1>
+                    <p>Please start the quiz to begin!</p>
 
 
                 </header>
 
                 <!-- main quiz content -->
-                <main>
+                <main class="app">
+                    <h1>Quiz Questions</h1>
+                    <div class="quiz">
+                        <h2 id="question">Questions go here</h2>
+                        <div id="answer-button">
+                            <button class="btn">Answer 1</button>
+                            <button class="btn">Answer 2</button>
+                            <button class="btn">Answer 3</button>
+                            <button class="btn">Answer 4</button>
+                        </div>
+                    </div>
+                    
 
 
 

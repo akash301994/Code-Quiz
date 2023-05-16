@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 
     border: 1px solid red;
 
@@ -11,17 +12,12 @@
 
 body {
     background-color: #53b0bd;
+    overflow: hidden;
 }
 
 p {
     color: white;
     font-size: 1.3em;
-}
-
-.top-bar {
-    padding: 30px;
-    margin: 20px;
-    
 }
 
 button {
@@ -32,23 +28,62 @@ button {
 
 }
 
-/*----------------- 
---outer container--
------------------- */
+h1, h2 {
+    color: darkgreen;
+}
+/* top bar container */
+
+.top-bar {
+    padding: 30px;
+    margin: 20px;
+    
+}
+
 
 .top-bar p {
     float: right;
     background-color: black;
 }
 
+/*----------------- 
+--outer container--
+------------------ */
 
 .outer-container {
     padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-direction: start;
 }
 
 
-/* --------------------
----inner container-----
------------------------*/
+/* inner container*/
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    
+    
+    
+}
 
 
+/* header quiz intro */
+.quiz-intro {
+
+}
+
+.btn{
+    background: white;
+    color: #222;
+    font-weight: 500;
+    
+}
+.btn:hover {
+    background
+}
