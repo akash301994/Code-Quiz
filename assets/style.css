@@ -5,7 +5,7 @@
     box-sizing: border-box;
     color: white;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -20,13 +20,13 @@ p {
     font-size: 1.3em;
 }
 
-button {
+/* button {
     outline: none;
     background-color: black;
     color: white;
     font-size: 1.3em;
 
-}
+} */
 
 h1, h2 {
     color: darkgreen;
@@ -49,7 +49,7 @@ h1, h2 {
 --outer container--
 ------------------ */
 
-.outer-container {
+ .outer-container {
     padding: 10px;
     height: 100vh;
     display: flex;
@@ -59,31 +59,73 @@ h1, h2 {
 
 
 /* inner container*/
-.inner-container {
+ .inner-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: black;
     height: 100%;
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto; 
+ }
     
     
     
-}
+
+
 
 
 /* header quiz intro */
 .quiz-intro {
+    padding: 50px;
+    justify-content: center;
 
+
+}
+
+
+/* buttons and attributes */
+.highscores {
+    background: white;
+    color: #222;
+    font-weight: 500;
+    border: 1 px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.highscores:hover {
+    background: #222;
+    color: white;
+    transition: all 0.3;
 }
 
 .btn{
     background: white;
     color: #222;
     font-weight: 500;
+    border: 1 px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
     
 }
 .btn:hover {
-    background
+    background: #222;
+    color: white;
+    transition: all 0.3;
+
+}
+
+.app h1 {
+    padding: 50px;
+    ;
+    
 }
