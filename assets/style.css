@@ -138,6 +138,34 @@ h2{
 
 }
 
+#start {
+    background: white;
+    color: #222;
+    font-weight: 500;
+    border: 1 px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#start:hover {
+    background: #222;
+    color: white;
+    transition: all 0.4s;
+
+}
+
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
+}
+
 .app h1 {
     text-align: center;
     
@@ -148,4 +176,6 @@ h2{
     text-align: center;
 }
 
-
+#app {
+    display: none;
+}

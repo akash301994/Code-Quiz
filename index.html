@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code-Quiz</title>
+    <title>Quiz</title>
     <link rel="stylesheet" type="text/css"  href="./assets/style.css">
 </head>
 
@@ -15,31 +15,26 @@
             <!-- top bar section -->
             <div class="top-bar">
                 <button class="highscores">View Highscores</button>
-                <p>Timer: 00:00</p>
+                <p id="count">Timer: 00:00</p>
 
             </div>
 
             <!-- inner div -->
             <div class="inner-container">
 
-
-
-            
-
                 <!-- main header/quiz intro -->
 
                 <header class="quiz-intro">
                     
                     <h1>Welcome to the quiz!</h1>
-                    <p>Please start the quiz to begin!</p>
+                    <p>Please press start to begin!</p>
 
-                    <button class="highscores">Start!</button>
-
+                    <button onclick="show()" id="start">Start!</button>
 
                 </header>
 
                 <!-- main quiz content -->
-                <main class="app">
+                <div id="app">
                     <h1>Quiz Questions</h1>
                     <div class="quiz">
                         <h2 id="question">Questions go here</h2>
@@ -52,16 +47,13 @@
                         <button id="next-btn">Next</button>
                     </div>
                     
-
-
-
-                </main>
+                </div>
 
              
             
             </div>
     
         </div>
-    
+    <script src="./assets/script.js"></script>
 </body>
 </html>
