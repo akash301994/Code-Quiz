@@ -46,11 +46,14 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const mainContainer = document.getElementById("app");
-
+var count = 60;
+var interval;
 
 // this shows the quiz questions once start button is clicked. 
 let show = function() {
     mainContainer.style.display = 'block';
+    timerControl();
+    document.querySelector('.quiz-intro').style.display = 'none';
 }
 
 let currentQuestionIndex = 0;
@@ -92,6 +95,7 @@ function resetState() {
 }
 
 function selectAnswer(e){
+    
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -112,17 +116,21 @@ function selectAnswer(e){
     }
 startQuiz();
 
-//timer
-var count = 60;
-var interval = setInterval(function(){
-  document.getElementById('count').innerHTML=count;
-  count--;
-  if (count === 0){
-    clearInterval(interval);
-    document.getElementById('count').innerHTML='Your time ran out!, please click next';
-    
-  }
-}, 1000);
+
+
+function timerControl() {
+
+      interval = setInterval(function(){
+        
+      document.getElementById('count').textContent = 'Timer ' + count + ' seconds left';
+      count--;
+      if (count <= 0){
+        clearInterval(interval);
+        document.getElementById('count').innerHTML='Your time ran out!, please click next';
+        
+      }
+    }, 1000);
+}
 
 function handleNextButton(){
     currentQuestionIndex++;
@@ -138,6 +146,36 @@ function showScore (){
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
+    var input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('id', 'initials');
+    const button = document.createElement('button');
+    button.textContent = 'submit'
+    button.onclick = scores
+    document.querySelector('#answer-buttons').innerHTML = ""
+    document.querySelector('#answer-buttons').append(input, button);
+
+}
+
+function scores() {
+    var initials = document.querySelector('#initials').value
+    console.log(initials);
+    var player = {
+        name: initials, 
+        scores: score
+    }
+    console.log(player)
+    var playerHistory = JSON.parse(localStorage.getItem('history')) || [];
+    playerHistory.push(player);
+    localStorage.setItem('history', JSON.stringify(playerHistory));
+
+
+}
+
+function highScores() {
+    var playerHistory = JSON.parse(localStorage.getItem('history')) || [];
+    questionElement.innerHTML = 'Your Highscores!'
+
 }
 
 nextButton.addEventListener("click", ()=> {
