@@ -46,6 +46,8 @@ const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 const mainContainer = document.getElementById("app");
+
+// global variables for timer. 
 var count = 60;
 var interval;
 
@@ -140,6 +142,8 @@ function handleNextButton(){
         showScore();
     }
 }
+  
+// sumbit scores and local storage function
 
 function showScore (){
     resetState();
@@ -149,7 +153,9 @@ function showScore (){
     var input = document.createElement('input');
     input.setAttribute('type', 'text');
     input.setAttribute('id', 'initials');
+    
     const button = document.createElement('button');
+    
     button.textContent = 'submit'
     button.onclick = scores
     document.querySelector('#answer-buttons').innerHTML = ""
@@ -172,11 +178,26 @@ function scores() {
 
 }
 
+
+
 function highScores() {
     var playerHistory = JSON.parse(localStorage.getItem('history')) || [];
-    questionElement.innerHTML = 'Your Highscores!'
+    questionElement.innerHTML = 'Your Highscores!';
+  
+    var scoresContainer = document.getElementById('app');
+  
+    // Clear any existing content inside the app div
+    scoresContainer.innerHTML = '';
+  
+    // Iterate over each player in playerHistory
+    playerHistory.forEach(function (player) {
+      var playerScore = document.createElement('p');
+      playerScore.textContent = 'Player: ' + player.name + ' - Score: ' + player.scores;
+      scoresContainer.appendChild(playerScore);
+    });
+  }
 
-}
+
 
 nextButton.addEventListener("click", ()=> {
     if(currentQuestionIndex < questions.length) {

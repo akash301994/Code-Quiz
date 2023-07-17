@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
+    color:rgb(7, 1, 1);
 
     /* border: 1px solid red; */
 
@@ -16,12 +16,12 @@ body {
 }
 
 p {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.3em;
 }
 
 h1 {
-    color: white;
+    color: rgb(12, 1, 1);
 }
 
 h2{
